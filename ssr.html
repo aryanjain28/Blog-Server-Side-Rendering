@@ -1,0 +1,218 @@
+<html>
+  <head>
+    <title>Server Side Rendering - What, Why & How?</title>
+    <link rel="stylesheet" href="./ssr.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baskervville|Muli&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cookie&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="mainBorder">
+      <div id="mainHeading">Server Side Rendering!</div>
+
+      <div id="mainBody">
+        This is one of those topics that can be quite simple to put into action
+        without truly grasping it deeply! However, it's important to understand
+        it for a better implementation.
+      </div>
+
+      <div id="mainBody">
+        In the recent days Server-Side-Rendering, in short SSR, gained a lot of
+        popularity. But why? Everything was fine right? <br /><br />
+        <a href="https://nextjs.org/docs">Next.js</a> has a really good
+        documentation / blog on this. Therefore I will not deep dive into the
+        Next.js's coding part, through this blog I simply aim to present a
+        generic understanding of SSR in <i>plain english.</i>
+      </div>
+
+      <div id="contentImages">
+        <center>
+          <img src="img1.png" width="300" height="" />
+        </center>
+      </div>
+
+      <div id="majorHeading">Introduction 🥁</div>
+
+      <div id="mainBody">
+        <br />
+        I will explain this by comparing the traditional
+        <i>Client-Side-Rendering (CSR)</i>, using an example, <br /><br />
+        <u>Client Side Rendering [CSR] <i>The old hero &nbsp;</i>:</u>
+
+        <div id="contentImages">
+          <center>
+            <img src="img2.png" width="350" height="" />
+            <br />
+            <i style="margin-top: 5px; font-size: 10px">Not really</i>
+          </center>
+        </div>
+
+        Now, imagine you're at a restaurant, and you order a fancy dessert.
+        <br />
+        The waiter brings you the ingredients, the recipe, and all the tools
+        needed to make the dessert right at your table. <br />
+        You start following the instructions, mix everything together, and
+        voilà, you have a delicious treat ready to enjoy.
+        <i>And then pay for that too..</i>
+
+        <div id="contentImages">
+          <center>
+            <img src="img3.png" width="350" height="" />
+          </center>
+        </div>
+
+        In web terms, this is what Client-Side Rendering does. Basically, when
+        you visit a website that uses CSR, your web browser is like the waiter.
+        It receives a basic set of instructions and ingredients (HTML and
+        JavaScript), and it assembles the webpage on your device. This allows
+        for dynamic and interactive experiences, like animations and real-time
+        updates, but it might take a little longer for the page to show up
+        initially because your browser has to do some work to put everything
+        together.
+        <br /><br />
+
+        <u>Server Side Rendering (SSR):</u>
+
+        <br /><br />
+
+        Now, let's go back to the restaurant, but this time it's a bit
+        different. You order the dessert, and the waiter goes to the kitchen to
+        prepare it for you. They bring the finished dessert to your table, and
+        you can start savoring it immediately.
+
+        <div id="contentImages">
+          <center>
+            <img src="img4.png" width="350" height="" />
+          </center>
+        </div>
+
+        In web terms, Server-Side Rendering works similarly. When you visit a
+        website that uses SSR, the server (<u>like the kitchen</u>) prepares the
+        complete webpage in advance, including all the toppings and decorations.
+        Then, it sends the fully baked webpage to your browser. As a result, the
+        page appears faster because most of the work has already been done on
+        the server.
+
+        <br /><br />
+        <i>And then you pay for their service.</i>
+        <br />
+        <i>kinda feels like the right thing.. haha. Wait for it!</i> &nbsp;😈
+        <br /><br />
+
+        <!-- Next.js is like a special tool that helps us do this, and in this
+        article, we'll explore what it's all about and why it's so awesome for
+        modern websites.
+        <br />
+        <br />
+
+        Umm. Ok, I agree, maybe not the best example! But stick with me. -->
+      </div>
+
+      <div id="majorHeading">Cool features of SSR</div>
+
+      <div id="contentImages">
+        <center>
+          <img src="img5.png" width="350" height="" />
+        </center>
+      </div>
+
+      <div id="mainBody">
+        <u>#1. Faster Websites</u>: SSR makes websites open up faster because a
+        lot of the work is already done before the site gets to you. This is
+        especially helpful if you're using a slow internet connection or a
+        not-so-powerful device. <br /><br />
+        <u>#2. Better Search Results</u>: Search engines like Google prefer
+        websites that use SSR. This makes it easier for them to understand what
+        a website is about and show it to people who are looking for similar
+        things. <br /><br />
+        <u>#3. Good for Sharing</u>: When you share a link on social media, SSR
+        helps show a preview of the website's content. This is important because
+        you want the preview to match what's on the actual page. <br /><br />
+
+        <u>#4. Works When Stuff Breaks</u>: Sometimes, parts of a website might
+        not work properly because of technical issues. SSR helps by making sure
+        you can still see the main stuff even if the fancy parts aren't working.
+
+        <br /><br />
+        <i> And there are a lot more which you can find in the internet... </i>
+      </div>
+      <br /><br />
+
+      <div id="majorHeading">Then why not we "just" use SSR</div>
+      <div id="mainBody">
+        <i
+          >with great power comes great responsibilities, and SSR sometimes
+          fails to handle some of those responsibilities</i
+        >
+
+        <br /><br />
+        Basically,
+
+        <div id="contentImages">
+          <center>
+            <img src="img6.png" width="350" height="" />
+          </center>
+        </div>
+
+        <u>#1. Slower Initial Load on Server: </u>SSR requires the server to do
+        more work before showing you a website. This can sometimes slow down the
+        server and make it take longer to send you the page. <br /><br />
+        <u>#2. More Server Resources:</u> Because SSR does extra work on the
+        server, it needs more power and resources. This can be a problem if a
+        lot of people are trying to use the website at the same time.
+        <br /><br />
+        <u>#4. Limited Client-Side Interactivity</u>: While SSR makes things
+        load faster, it can limit some of the fancy interactive features that
+        make websites really cool. Some of these features might not work as
+        smoothly with SSR. <br /><br />
+        <u>#5. Caching Challenges:</u> Caching, which helps store and reuse
+        information to speed up websites, can be a bit tricky with SSR. It
+        requires careful handling to make sure the cached content is always
+        up-to-date. <br /><br />
+      </div>
+
+      <div id="majorHeading">Conclusion 🎺</div>
+      <div id="mainBody">
+        <br />
+
+        Like every other thing in life, SSR has its advantages and
+        disadvantages. When to use CSR and when to use SSR is very highly
+        dependent on the type of website you're trying to build.
+        <br /><br />
+        My opinion, if your website will require a lot of user interaction and
+        dynamic updates (<u>like real-time chats or interactive maps</u>), CSR
+        might be a better fit. However, if search engine optimization (SEO) and
+        social sharing are important for your application, go with SSR.
+
+        <div id="contentImages">
+          <center>
+            <img src="img7.png" width="350" height="" />
+          </center>
+        </div>
+
+        Everything else seems managable.
+
+        <br /><br />
+        That's it. I hope you enjoyed reading this short blog!
+        <br /><br />
+        What are you waiting for? Go ahead a implement SSR, also checkout my
+        cool projects that uses Next.js here:
+        <a href="https://aryanjain28.github.io/"
+          >https://aryanjain28.github.io/</a
+        >
+
+        <br /><br />
+        Happy Coding!
+      </div>
+    </div>
+  </body>
+</html>
